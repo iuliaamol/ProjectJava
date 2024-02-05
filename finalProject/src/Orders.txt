@@ -1,0 +1,6 @@
+1, 1, chocoCkae, 123, novac
+2, 3, surpriseCake, 300, stejarului
+3, 1, chocoCkae, 123, ckjhgf
+4, 3, surpriseCake, 300, eroilor
+5, 2, vanillaCake, 230, stejarului
+6, 1, chocoCkae, 123, centru

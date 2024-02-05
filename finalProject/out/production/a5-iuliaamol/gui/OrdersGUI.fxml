@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <VBox prefHeight="400.0" prefWidth="324.0">
+            <children>
+                <HBox prefHeight="38.0" prefWidth="264.0">
+                    <children>
+                        <Label prefHeight="38.0" prefWidth="142.0" text=" ORDERS" />
+                        <TextField fx:id="searchTextFile" prefHeight="38.0" prefWidth="242.0" />
+                    </children>
+                </HBox>
+                <ListView fx:id="ordersListView" prefHeight="168.0" prefWidth="264.0" />
+            <Label prefHeight="38.0" prefWidth="142.0" text="Filtered List" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="154.0" prefWidth="213.0" spacing="6.0">
+                     <children>
+                        <Button fx:id="ordersWithASpecificCakeButton" mnemonicParsing="false" onAction="#OrdersWithSpecificCake" prefHeight="26.0" prefWidth="162.0" text="Orders with a specific cake" />
+                        <Button fx:id="OrdersWithCakesPriceGreaterThanButton" mnemonicParsing="false" onAction="#OrdersWithCakesPriceGreaterThan" prefHeight="26.0" prefWidth="242.0" text="Orders With Cakes Price GreaterThan" />
+                        <Button fx:id="OrdersWithMostExpensiveCakeButton" mnemonicParsing="false" onAction="#OrdersWithMostExpensiveCake" text="Orders With Most Expensive Cake" />
+                        <Button fx:id="TotalNumberOfCakesSoldButton" mnemonicParsing="false" onAction="#TotalNumberOfCakesSold" text="Total Number Of Cakes Sold" />
+                     </children>
+                     <HBox.margin>
+                        <Insets right="15.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="6.0">
+                     <children>
+                        <TextField fx:id="text1" />
+                        <TextField fx:id="text3" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            </children></VBox>
+        <GridPane fx:id="updateOrderButtton" onMouseClicked="#updateOrder" prefHeight="379.0" prefWidth="331.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+         <children>
+            <Label prefHeight="38.0" prefWidth="142.0" text="ID">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin></Label>
+            <Label layoutX="10.0" layoutY="57.0" prefHeight="38.0" prefWidth="142.0" text="ID Cake" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin></Label>
+            <Label layoutX="10.0" layoutY="191.0" prefHeight="38.0" prefWidth="142.0" text="Adress" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin></Label>
+            <TextField fx:id="idCakeOTextFIled" prefHeight="38.0" prefWidth="242.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin></TextField>
+            <TextField fx:id="idOrderTextFiled" layoutX="162.0" layoutY="57.0" prefHeight="38.0" prefWidth="242.0" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin></TextField>
+            <TextField fx:id="adressOrderTextFiled" layoutX="162.0" layoutY="191.0" prefHeight="38.0" prefWidth="242.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin></TextField>
+            <Button fx:id="addOrderButton" mnemonicParsing="false" onAction="#addOrder" text="New order" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin></Button>
+            <Button fx:id="removeOrderButton" mnemonicParsing="false" onAction="#removeOrder" text="Finish order" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin></Button>
+            <Button fx:id="updateOrderButton" mnemonicParsing="false" onAction="#updateOrder" text="Update order" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+        </GridPane>
+    </children>
+</HBox>
